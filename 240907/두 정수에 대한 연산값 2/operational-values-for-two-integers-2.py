@@ -2,7 +2,7 @@ a, b = map(int, input().split())
 def cal(a, b):
     c = min(a, b)
     d = max(a, b)
-    c += 10
-    d *= 2
-    return c, d
+    a = c+10
+    b = d*2
+    return a, b
 print(cal(a, b)[0], cal(a, b)[1])
