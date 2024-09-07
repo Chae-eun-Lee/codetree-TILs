@@ -1,3 +1,3 @@
-a = c
-a = T
+a = 'c'
+a = 'T'
 print(a)
