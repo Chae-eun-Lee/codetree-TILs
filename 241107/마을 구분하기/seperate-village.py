@@ -15,7 +15,7 @@ def dfs(x, y, grid, visited):
                 visited[nx][ny] = True
                 stack.append((nx, ny))
                 s += 1
-    return size
+    return s
 
 n = int(input())
 grid = [list(map(int, input().split())) for _ in range(n)]
