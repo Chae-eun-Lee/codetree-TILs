@@ -9,6 +9,7 @@ for i in range(n):
             keep += 1
         else:
             keep = 1
+            continue
 
         if keep >= m:
             happy += 1
@@ -21,9 +22,14 @@ for i in range(n):
             keep += 1
         else:
             keep = 1
+            continue
         
         if keep >= m:
             happy += 1
             break
+
+if m == 1:
+    happy = n*2
+
 
 print(happy)
