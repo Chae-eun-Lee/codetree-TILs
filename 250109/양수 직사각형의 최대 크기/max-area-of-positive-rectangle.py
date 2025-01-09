@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
-answer = 0
+answer = -1
 
 # 사각형 크기 얼마나 좁힐자
 for height in range(n, 0, -1):
