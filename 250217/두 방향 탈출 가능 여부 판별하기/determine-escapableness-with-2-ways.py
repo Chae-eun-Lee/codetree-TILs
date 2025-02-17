@@ -2,8 +2,8 @@ n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
 
 order = 0
-visited = [([0]*n) for _ in range(m)]
-answer = [([0]*n) for _ in range(m)]
+visited = [([0]*m) for _ in range(n)]
+answer = [([0]*m) for _ in range(n)]
 
 def in_range(x, y):
     return 0 <= x < m and 0<=y<n 
