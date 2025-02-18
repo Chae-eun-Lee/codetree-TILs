@@ -20,17 +20,16 @@ def dfs(x, y):
             dfs(nx, ny)
 
 
-for a in range(n):
-    for b in range(m):
-        total = 0
-        k = grid[a][b]
-        visited = [([False]*m) for _ in range(n)]
-        for i in range(n):
-            for j in range(m):
-                if can_go(i, j):
-                    total += 1
-                    dfs(i, j)
-        max_area.append([total, k])
+max_height = max(map(max, grid))
+for k in range(1, max_height+1):
+    total = 0
+    visited = [([False]*m) for _ in range(n)]
+    for i in range(n):
+        for j in range(m):
+            if can_go(i, j):
+                total += 1
+                dfs(i, j)
+    max_area.append([total, k])
 
 max_area.sort(key=lambda x:(x[0], -x[1]), reverse=True)
 print(str(max_area[0][1])+" "+str(max_area[0][0]))
